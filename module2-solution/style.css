@@ -1,0 +1,75 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Style untuk tiap section */
+.section {
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+.section-title {
+  border: 1px solid black;
+  background-color: #e6b800;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+/* Warna unik tiap section */
+.chicken {
+  background-color: #ffe5e5;
+}
+
+.beef {
+  background-color: #ffe0cc;
+}
+
+.sushi {
+  background-color: #e6f9ff;
+}
+
+/* Desktop view: 3 kolom */
+@media (min-width: 992px) {
+  .section {
+    float: left;
+    width: 31%;
+  }
+}
+
+/* Tablet view: 2 kolom atas, 1 di bawah */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    float: left;
+    width: 48%;
+  }
+
+  .section:nth-child(3) {
+    width: 98%;
+  }
+}
+
+/* Mobile view: 1 kolom semua */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+  }
+}
